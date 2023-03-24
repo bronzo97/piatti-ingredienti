@@ -35,7 +35,7 @@
                             <div class="form-outline">
                                 <input type="search" id="form1" name="search" class="form-control" value="{{ old('search') ?? $search }}"/>
                             </div>
-                            <input type="submit" class="btn btn-info" value="Cerca">
+                            <input type="submit" class="btn btn-info text-white" value="Cerca">
                         </div>
                     </div>
                 </div>
