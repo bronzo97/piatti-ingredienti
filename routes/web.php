@@ -18,8 +18,10 @@ use App\Http\Controllers\CountController;
 |
 */
 
-// return count of both entities
-Route::get('/', [App\Http\Controllers\CountController::class, 'count']);
+// COUNT ENTITIES IN DASHBOARD
+//Route::get('/', [App\Http\Controllers\CountController::class, 'count']);
+// SEARCH ENTITIES IN DASHBOARD
+Route::get('/', [App\Http\Controllers\CountController::class, 'index']);
 
 // PIATTI CONTROLLER ROUTES
 Route::get('/listapiatti', [App\Http\Controllers\PiattoController::class, 'index']);

@@ -1,0 +1,59 @@
+* {
+    font-family: "GT Sectra Fine", "Old Standard TT", serif;
+}
+
+
+/* NAV */
+
+.my-nav {
+    
+    flex-direction: column;
+    align-items: start;
+    height: 100vh;
+    background-image: url('../images/ingredienti2.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+
+.my-nav a {
+    color: #fff;
+    border-bottom: 2px solid transparent;
+}
+
+.my-nav a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    transform: scale(1);
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+
+
+}
+
+/* DASHBOARD */
+
+.my-bg {
+    background-color: #EFF2F4;
+}
+
+.my-card {
+    margin: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transform: scale(1);
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+}
+
+.my-card:hover {
+    transform: scale(1.1);
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+}
+
+

@@ -23,6 +23,15 @@
                 </button>
             </div>
         </div>
+    <!-- HANDLES DELETING ERRORS -->
+
+    @if(session('error'))
+        <div class="alert alert-danger">
+            <ul>
+                    <li>{{ session('error') }}</li>
+            </ul>
+        </div>
+    @endif
         @foreach($lista_ingredienti as $ingrediente)
             <div class="row m-3">
                 <div class="col">
@@ -63,16 +72,6 @@
                 </div>
             </div>
         @endforeach
-
-        <!-- HANDLES DELETING ERRORS -->
-        
-        @if(session('error'))
-            <div class="alert alert-danger">
-                <ul>
-                        <li>{{ session('error') }}</li>
-                </ul>
-            </div>
-        @endif
         
         <!-- COUNT TIPOLOGIES TABLE -->
         <h2 class="text-center m-3">Tabella conteggio tipologie</h2>
