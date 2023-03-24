@@ -3,15 +3,18 @@
 
 @section('content')
     <div class="container">
-        <h1 class="text-center m-5">Lista Ingredienti</h1>
+        <h1 class="text-center m-3">Lista Ingredienti</h1>
         <form action="{{ url('listaingredienti') }}" method="get">
         @csrf
             <div class="row">
-                <div class="col text-center m-5">
-                    <label for="search">Cerca un ingrediente:</label>
-                    <input type="search" id="search" name="search" value="{{ old('search_ingredienti') ?? $search_ingredienti }}">
-
-                    <input type="submit" value="Cerca">
+                <div class="col mb-4 text-center">
+                    <div class="input-group justify-content-center align-items-center">
+                        <label for="search" class="m-2">Cerca un ingrediente:</label>
+                        <div class="form-outline">
+                            <input type="search" id="form1" name="search" class="form-control" value="{{ old('search_ingredienti') ?? $search_ingredienti }}"/>
+                        </div>
+                        <input type="submit" class="btn btn-info" value="Cerca">
+                    </div>
                 </div>
             </div>
         </form>
@@ -32,8 +35,9 @@
             </ul>
         </div>
     @endif
+    {{-- PRINTS INGREDIENTS LIST --}}
         @foreach($lista_ingredienti as $ingrediente)
-            <div class="row m-3">
+            <div class="row m-4">
                 <div class="col">
                     {{ $ingrediente->nome_ingrediente }}
                 </div>

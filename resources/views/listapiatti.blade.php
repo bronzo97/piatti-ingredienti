@@ -6,14 +6,17 @@
         <h1 class="text-center m-5">Lista Piatti</h1>
         <form action="{{ url('listapiatti') }}" method="get">
         @csrf
-            <div class="row">
-                <div class="col text-center m-5">
-                    <label for="search">Cerca un piatto:</label>
-                    <input type="search" id="search" name="search" value="{{ old('search_piatti') ?? $search_piatti }}">
-
-                    <input type="submit" value="Cerca">
+        <div class="row">
+            <div class="col mb-4 text-center">
+                <div class="input-group justify-content-center align-items-center">
+                    <label for="search" class="m-2">Cerca un piatto:</label>
+                    <div class="form-outline">
+                        <input type="search" id="form1" name="search" class="form-control" value="{{ old('search_piatti') ?? $search_piatti }}"/>
+                    </div>
+                    <input type="submit" class="btn btn-info" value="Cerca">
                 </div>
             </div>
+        </div>
         </form>
         <div class="row text-center mb-5">
             <div class="col">

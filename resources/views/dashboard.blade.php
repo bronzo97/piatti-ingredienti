@@ -22,17 +22,21 @@
         </div>
     </div>
     {{-- SEARCH --}}
-    <div class="row">
+    <div class="row m-5">
         <div class="col">
             <h3 class="text-center">Cerca un piatto o un ingrediente</h3>
             <form action="{{ url('/') }}" method="get">
             @csrf
-                <div class="row justify-content-center form-inline">
-                    <div class="col text-center m-5">
-                        <input type="search" class="col form-control" name="search" placeholder="Cerca">
-                    </div>
-                    <div class="col align-self-center">
-                        <input type="submit" class="btn btn-outline-success" value="Cerca">
+
+            
+                <div class="row m-3">
+                    <div class="col">
+                        <div class="input-group justify-content-center">
+                            <div class="form-outline">
+                                <input type="search" id="form1" name="search" class="form-control" value="{{ old('search') ?? $search }}"/>
+                            </div>
+                            <input type="submit" class="btn btn-info" value="Cerca">
+                        </div>
                     </div>
                 </div>
                 {{-- PRINT LISTA SEARCH PIATTI --}}

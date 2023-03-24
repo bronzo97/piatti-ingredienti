@@ -14,6 +14,7 @@ class CountController extends Controller
         $count_piatti = Piatto::count();
         $count_ingredienti = Ingrediente::count();
         $title = 'Dashboard';
+        $search = '';
 
         // SEARCH
         
@@ -22,7 +23,7 @@ class CountController extends Controller
             $search_ingredienti = '';
             $search_piatti = '';
             
-            return view('dashboard', compact('search_ingredienti', 'search_piatti', 'title', 'count_ingredienti', 'count_piatti'));
+            return view('dashboard', compact('search', 'search_ingredienti', 'search_piatti', 'title', 'count_ingredienti', 'count_piatti'));
         } else {
             $search = $request->search;
 
@@ -34,7 +35,7 @@ class CountController extends Controller
 
             //dd($search_piatti, $search_ingredienti);
             
-            return view('dashboard', compact('search_ingredienti', 'search_piatti', 'title', 'count_ingredienti', 'count_piatti'));
+            return view('dashboard', compact('search', 'search_ingredienti', 'search_piatti', 'title', 'count_ingredienti', 'count_piatti'));
         }
         
     }
